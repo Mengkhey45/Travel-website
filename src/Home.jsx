@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <section  className='xl:mb-20 2xl:mb-30'>
-        <div className="h-auto xl:h-200 bg-cover bg-center relative" style={{ backgroundImage: `url(/assets/img/home-bg.jpg)` }}>
+        <div className="h-auto xl:h-200 bg-cover bg-center relative" style={{ backgroundImage: `url(/img/home-bg.jpg)` }}>
           <div className='flex flex-col items-center relative'>
             <div className="z-0 absolute h-auto inset-0 bg-gradient-to-b from-black/0 via-black/40 to-black"></div>
 
@@ -32,7 +32,7 @@ const Home = () => {
 
                 return (
                   <article key={index} className='relative w-70 h-48 overflow-hidden'>
-                    <img className='transform transition-all duration-500 hover:scale-115 w-full h-full object-cover' src={`public/img/${image}`} alt={image.split('.')[0]} />
+                    <img className='transform transition-all duration-500 hover:scale-115 w-full h-full object-cover' src={`/img/${image}`} alt={image.split('.')[0]} />
                     <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
                     <h3 className='z-10 absolute bottom-5 left-4 text-white font-semibold'>{country}</h3> 
                   </article>

@@ -45,7 +45,7 @@ const Popular = () => {
             <div className='relative w-70 h-73 xl:w-80 xl:h-85  overflow-hidden'>
               <img 
                 className='w-full h-full object-cover transform transition-all duration-500 hover:scale-110' 
-                src={`/assets/img/${place.img}`} 
+                src={`/img/${place.img}`} 
                 alt={place.title} 
               />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
