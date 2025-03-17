@@ -1,13 +1,14 @@
-import Home from "./Home"
-import './App.css'
-import './index.css'
-import Navbar from "./Navbar"
-import About from "./About"
-import Popular from "./Popular"
-import Explore from "./Explore"
-import Join from "./Join"
-import Foot from "./Foot"
-import Scoll from "./Scoll"
+
+import './assets/index.css'
+
+import Home from "./pages/Home"
+import Navbar from "./components/Navbar"
+import About from "./pages/About"
+import Popular from "./pages/Popular"
+import Explore from "./pages/Explore"
+import Join from "./pages/Join"
+import Foot from "./components/Foot"
+import Scoll from "./components/Scoll"
 function App() {
 
 

@@ -30,7 +30,7 @@ const Explore = () => {
       <section id="explore" ref={sectionRef} className="relative bg-black h-140 xl:h-160 mt-30  xl:mt-70 xl:mb-40  mb-20">
         <div
           className="relative w-full h-80 xl:h-130 bg-cover bg-center"
-          style={{ backgroundImage: "url('/img/explore-beach.jpg')" }}
+          style={{ backgroundImage: "url('src/assets/img/explore-beach.jpg')" }}
         >
           {/* Dark overlay at both top and bottom */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
@@ -52,7 +52,7 @@ const Explore = () => {
                 </p>
               </div>
               <div className="flex items-center gap-5">
-                <img className="size-10 rounded-full" src="/img/explore-perfil.png" alt="profile-picture" />
+                <img className="size-10 rounded-full brightness-125" src="src/assets/img/explore-perfil.png" alt="profile-picture" />
                 <h3>Paul Jeams</h3>
               </div>
             </div>
