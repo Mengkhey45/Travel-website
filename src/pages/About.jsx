@@ -61,7 +61,6 @@ const About = () => {
                 ref={imgRef}
                 className={`md: max-w-140 w-80 h-85 transition-opacity duration-500  2xl:ml-0 2xl:size-120  ${
                 isVisible ? 'fade-in-left' : ''}`}
-        //  src="src/assets/img/about-beach.jpg"
           src={beachPhoto}
           alt="beach-photo"
         />

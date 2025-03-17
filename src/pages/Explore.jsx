@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import exploreProfile from '../assets/img/explore-perfil.png';
 
 const Explore = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,7 +53,7 @@ const Explore = () => {
                 </p>
               </div>
               <div className="flex items-center gap-5">
-                <img className="size-10 rounded-full brightness-125" src="src/assets/img/explore-perfil.png" alt="profile-picture" />
+                <img className="size-10 rounded-full brightness-125" src={exploreProfile} alt="profile-picture" />
                 <h3>Paul Jeams</h3>
               </div>
             </div>

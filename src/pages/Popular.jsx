@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
+import popularMountain from '../assets/img/popular-mountain.jpg';
+import popularForest from '../assets/img/popular-forest.jpg';
+import popularLake from '../assets/img/popular-lake.jpg';
 
 const Popular = () => {
   const sectionRef = useRef(null);
@@ -25,6 +28,12 @@ const Popular = () => {
     };
   }, []);
 
+  const places = [
+    { img: popularMountain, title: "Logan Mountain", location: "Canada", delay: "delay-200", duration: "duration-1000" },
+    { img: popularForest, title: "Spike Forest", location: "Ireland", delay: "delay-400", duration: "duration-1500" },
+    { img: popularLake, title: "Garda Lake", location: "Italy", delay: "delay-600", duration: "duration-2000" }
+  ];
+
   return (
     <section id="popular" ref={sectionRef} className='flex items-center flex-col gap-10 bg-black py-15 mb-30'>
       <h1 
@@ -32,26 +41,22 @@ const Popular = () => {
       >
         Enjoy The Beauty Of The World
       </h1> 
-      <div className='grid md:grid-cols-2 gap-10  lg:grid-cols-3 xl:gap-x-20  gap-y-25 items-center  bg-black text-white'>
-        {[
-          { img: "popular-mountain.jpg", title: "Logan Mountain", location: "Canada", delay: "delay-200", duration: "duration-1000" },
-          { img: "popular-forest.jpg", title: "Spike Forest", location: "Ireland", delay: "delay-400", duration: "duration-1500" },
-          { img: "popular-lake.jpg", title: "Garda Lake", location: "Italy", delay: "delay-600", duration: "duration-2000" }
-        ].map((place, index) => (
+      <div className='grid md:grid-cols-2 gap-10 lg:grid-cols-3 xl:gap-x-20 gap-y-25 items-center bg-black text-white'>
+        {places.map((place, index) => (
           <article 
             key={index} 
-            className={`relative w-70 h-73  transition-all ${place.duration} ${isVisible ? `opacity-100 translate-y-0 ${place.delay}` : 'opacity-0 translate-y-10'}`}
+            className={`relative w-70 h-73 transition-all ${place.duration} ${isVisible ? `opacity-100 translate-y-0 ${place.delay}` : 'opacity-0 translate-y-10'}`}
           >
-            <div className='relative w-70 h-73 xl:w-80 xl:h-85  overflow-hidden'>
+            <div className='relative w-70 h-73 xl:w-80 xl:h-85 overflow-hidden'>
               <img 
                 className='w-full h-full object-cover transform transition-all duration-500 hover:scale-110' 
-                src={`src/assets/img/${place.img}`} 
+                src={place.img} 
                 alt={place.title} 
               />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
             </div>
-            <h2 className='text-xl font-medium mt-3 '>{place.title}</h2>
-            <p className='text-white/70'><i className='bx bx-location-plus '></i> {place.location}</p>
+            <h2 className='text-xl font-medium mt-3'>{place.title}</h2>
+            <p className='text-white/70'><i className='bx bx-location-plus'></i> {place.location}</p>
           </article>
         ))}
       </div>

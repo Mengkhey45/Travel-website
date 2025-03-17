@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import joinIsland from '../assets/img/join-island.jpg';
 
 const Join = () => {
   const textRef = useRef(null);
@@ -54,7 +55,7 @@ const Join = () => {
             isVisible ? 'fade-in-left' : ''
           }`}
         >
-          <img className='transform transition-all duration-500 hover:scale-115 w-full h-full object-cover' src='src/assets/img/join-island.jpg'  alt='island' />
+        <img className='transform transition-all duration-500 hover:scale-115 w-full h-full object-cover' src={joinIsland}  alt='island' />
           <div className='absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent pointer-events-none'></div>
         </div>
       </div>
