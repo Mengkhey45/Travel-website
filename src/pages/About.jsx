@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import beachPhoto from '../assets/img/about-beach.jpg';
 
 const About = () => {
   const textRef = useRef(null);
@@ -60,7 +61,8 @@ const About = () => {
                 ref={imgRef}
                 className={`md: max-w-140 w-80 h-85 transition-opacity duration-500  2xl:ml-0 2xl:size-120  ${
                 isVisible ? 'fade-in-left' : ''}`}
-         src="src/assets/img/about-beach.jpg"
+        //  src="src/assets/img/about-beach.jpg"
+          src={beachPhoto}
           alt="beach-photo"
         />
         <div ref={imgRef} className={` 2xl:ml-0 w-full absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/80 to-transparent pointer-events-nonetransition-opacity duration-500 md:self-start ${
