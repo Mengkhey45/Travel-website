@@ -22,7 +22,6 @@ function App() {
     <Join/>
     <Foot/>
     <Scoll/>
-  
     </>
   )
 }
